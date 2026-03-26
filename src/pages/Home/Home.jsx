@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import Modal from "../../components/Modal/Modal";
 import me from "../../assets/images/me.jpeg";
+import weatherImg from "../../assets/images/weather.png";
+import footballImg from "../../assets/images/football.png";
 
 function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
-    { title: "Project One", description: "React App mit API" },
-    { title: "Project Two", description: "Fullstack Projekt" },
+    { title: "Weather App", description: "Simple weather web app that communicates via API. Type your City and you are good to go for basic informations", image: weatherImg },
+    { title: "Football Manager", description: "A modern web-based event management system built with PHP, MySQL, and PDO. This application allows administrators to create events and users, while users can manage their participation status (Yes / Maybe / No) for each event.Football manager app to manage the Team ", image: footballImg },
   ];
 
   return (
@@ -122,7 +124,7 @@ function Home() {
         />
       )}
 
-      <div className="h-[2000px]"></div>
+      <div className="h-[200px]"></div>
 
     </div>
   );
