@@ -6,7 +6,12 @@ function Navbar() {
 
         <ul className="flex gap-6 text-sm">
           <li className="hover:text-gray-400 cursor-pointer">Home</li>
-          <li className="hover:text-gray-400 cursor-pointer">Projects</li>
+          <li
+  onClick={() => window.scrollTo({ top: 600, behavior: "smooth" })}
+  className="cursor-pointer hover:text-gray-400"
+>
+  Projects
+</li>
           <li className="hover:text-gray-400 cursor-pointer">Contact</li>
         </ul>
       </div>
