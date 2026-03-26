@@ -5,6 +5,8 @@ import Modal from "../../components/Modal/Modal";
 import me from "../../assets/images/me.jpeg";
 import weatherImg from "../../assets/images/weather.png";
 import footballImg from "../../assets/images/football.png";
+import onlineShopImg from "../../assets/images/onlineshop.png";
+import webtoolImg from "../../assets/images/webtool.png";
 
 function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -12,6 +14,8 @@ function Home() {
   const projects = [
     { title: "Weather App", description: "Simple weather web app that communicates via API. Type your City and you are good to go for basic informations", image: weatherImg },
     { title: "Football Manager", description: "A modern web-based event management system built with PHP, MySQL, and PDO. This application allows administrators to create events and users, while users can manage their participation status (Yes / Maybe / No) for each event.Football manager app to manage the Team ", image: footballImg },
+    { title: "Mini Online Shop with React", description: "A simple mini shop project built with React. The goal of this project is to practice React basics like components, state, and props.", image: onlineShopImg },
+    { title: "Easy managable Webtool", description: "This project is a web-based management tool for organizing participants and groups, featuring role management (Admin/Participant). It was developed independently by me as part of an internship at a company and successfully delivered to the client.", image: webtoolImg }
   ];
 
   return (
@@ -104,7 +108,10 @@ function Home() {
 
       {/* PROJECTS */}
       <section id="projects">
-        <h2 className="text-3xl font-semibold mb-10">Projekte</h2>
+        <h2 className="text-3xl font-semibold mb-10">Some Projects</h2>
+        <br />
+        <p>Note: Not all projects displayed !</p>
+        <br />
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard
