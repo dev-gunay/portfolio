@@ -59,7 +59,7 @@ function Home() {
             }}
             className="px-6 py-3 bg-white text-black rounded-xl font-medium"
           >
-            Projekte ansehen
+            view Projects
           </motion.button>
         </div>
 
