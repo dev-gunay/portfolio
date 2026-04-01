@@ -5,14 +5,23 @@ function Navbar() {
         <h1 className="text-xl font-bold">Dev.Guenay</h1>
 
         <ul className="flex gap-6 text-sm">
-          <li className="hover:text-gray-400 cursor-pointer">Home</li>
           <li
-  onClick={() => window.scrollTo({ top: 600, behavior: "smooth" })}
-  className="cursor-pointer hover:text-gray-400"
->
-  Projects
-</li>
-          <li className="hover:text-gray-400 cursor-pointer">Contact</li>
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="hover:text-gray-400 cursor-pointer"
+          >
+            Home
+          </li>
+          <li
+            onClick={() => window.scrollTo({ top: 600, behavior: "smooth" })}
+            className="hover:text-gray-400 cursor-pointer"
+          >
+            Projects
+          </li>
+          <li 
+          onClick={() => window.scrollTo({ top: 1800, behavior: "smooth" })}
+            className="hover:text-gray-400 cursor-pointer">
+            Contact
+          </li>
         </ul>
       </div>
     </nav>

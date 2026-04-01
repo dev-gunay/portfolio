@@ -110,7 +110,7 @@ function Home() {
       <section id="projects">
         <h2 className="text-3xl font-semibold mb-10">Some Projects</h2>
         <br />
-        <p>Note: Not all projects displayed !</p>
+        <p>Please note that this is a selection of featured projects. For a complete overview of my work, please visit my GitHub profile</p>
         <br />
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
