@@ -50,9 +50,9 @@ function Footer() {
             </a>
             </li>
             <li>
-            <a href="https://linkedin.com/in/deinprofil" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
+            {/* <a href="https://linkedin.com/in/deinprofil" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
                 LinkedIn
-            </a>
+            </a>  --- > vorerst kein LinkedIn da noch nicht eingerichtet */}
             </li>
             <li>
             <a href="tel:+4915906436847" className="hover:text-white transition-colors">

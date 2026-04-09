@@ -18,7 +18,7 @@ function Navbar() {
             Projects
           </li>
           <li 
-          onClick={() => window.scrollTo({ top: 1800, behavior: "smooth" })}
+          onClick={() => window.scrollTo({ top: 3800, behavior: "smooth" })}
             className="hover:text-gray-400 cursor-pointer">
             Contact
           </li>

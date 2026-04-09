@@ -11,6 +11,21 @@ import webtoolImg from "../../assets/images/webtool.png";
 function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const [activeStack, setActiveStack] = useState("frontend");
+
+  const skillsData = {
+    frontend: [
+      { name: "JavaScript", icon: "🟨" },
+      { name: "React.js", icon: "⚛️" },
+      { name: "HTML", icon: "🌐" },
+      { name: "CSS", icon: "🎨" },
+    ],
+    backend: [
+      { name: "PHP", icon: "🐘" },
+      { name: "SQL", icon: "🗄️" },
+    ],
+  };
+
   const projects = [
     { title: "Weather App", description: "Simple weather web app that communicates via API. Type your City and you are good to go for basic informations", image: weatherImg },
     { title: "Football Manager", description: "A modern web-based event management system built with PHP, MySQL, and PDO. This application allows administrators to create events and users, while users can manage their participation status (Yes / Maybe / No) for each event.Football manager app to manage the Team ", image: footballImg },
@@ -24,7 +39,6 @@ function Home() {
       {/* HERO */}
       <section className="mb-32 flex flex-col md:flex-row items-center justify-between gap-12">
 
-        {/* TEXT */}
         <div className="flex-1">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -59,11 +73,10 @@ function Home() {
             }}
             className="px-6 py-3 bg-white text-black rounded-xl font-medium"
           >
-            Projekte ansehen
+            view Project 
           </motion.button>
         </div>
 
-        {/* IMAGE */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -91,17 +104,48 @@ function Home() {
         </p>
       </section>
 
-      {/* TECH STACK */}
+      {/* TECH STACK (UPGRADED) */}
       <section className="mb-32">
         <h2 className="text-3xl font-semibold mb-6">Tech Stack</h2>
+
+        {/* Buttons */}
+        <div className="flex gap-4 mb-8">
+          <button
+            onClick={() => setActiveStack("frontend")}
+            className={`px-5 py-2 rounded-xl ${
+              activeStack === "frontend"
+                ? "bg-white text-black"
+                : "bg-gray-800 hover:bg-gray-700"
+            }`}
+          >
+            Frontend
+          </button>
+
+          <button
+            onClick={() => setActiveStack("backend")}
+            className={`px-5 py-2 rounded-xl ${
+              activeStack === "backend"
+                ? "bg-white text-black"
+                : "bg-gray-800 hover:bg-gray-700"
+            }`}
+          >
+            Backend
+          </button>
+        </div>
+
+        {/* Skills */}
         <div className="flex flex-wrap gap-4">
-          {["JavaScript", "React", "PHP", "SQL", "HTML", "CSS"].map((skill) => (
-            <div
-              key={skill}
-              className="px-4 py-2 bg-gray-800 rounded-xl text-sm hover:bg-gray-700 transition"
+          {skillsData[activeStack].map((skill, index) => (
+            <motion.div
+              key={skill.name}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-800 rounded-xl hover:bg-gray-700 transition"
             >
-              {skill}
-            </div>
+              <span>{skill.icon}</span>
+              <span>{skill.name}</span>
+            </motion.div>
           ))}
         </div>
       </section>
