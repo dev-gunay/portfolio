@@ -16,7 +16,7 @@ function Home() {
   const skillsData = {
     frontend: [
       { name: "JavaScript", icon: "🟨" },
-      { name: "React.js", icon: "⚛️" },
+      { name: "React", icon: "⚛️" },
       { name: "HTML", icon: "🌐" },
       { name: "CSS", icon: "🎨" },
     ],
