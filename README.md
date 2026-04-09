@@ -39,8 +39,6 @@ The intention of this Portfolio Project is to highlight my work and create a str
 
 ## 📂 Project Structure
 
-## 📁 Projektstruktur
-
 ```
 my-app/
 ├── public/                
